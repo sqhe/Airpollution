@@ -1,0 +1,120 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Simplifier - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP16A.tmp" with contents
+[
+/nologo /MTd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /FR"Debug/" /Fp"Debug/Simplifier.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"F:\WIND\Simplifier(surfacefitting)\ChildView.cpp"
+"F:\WIND\Simplifier(surfacefitting)\Mesh.cpp"
+"F:\WIND\Simplifier(surfacefitting)\Transform.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP16A.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP16B.tmp" with contents
+[
+opengl32.lib glu32.lib glaux.lib winmm.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug/Simplifier.pdb" /debug /machine:I386 /out:"Debug/Simplifier.exe" /pdbtype:sept 
+".\Debug\ChildView.obj"
+".\Debug\Heap.obj"
+".\Debug\InitOpenGL.obj"
+".\Debug\MainFrm.obj"
+".\Debug\Mesh.obj"
+".\Debug\Simplifier.obj"
+".\Debug\SimplifyDiag.obj"
+".\Debug\StdAfx.obj"
+".\Debug\Transform.obj"
+".\Debug\Simplifier.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP16B.tmp"
+<h3>Output Window</h3>
+Compiling...
+ChildView.cpp
+F:\WIND\Simplifier(surfacefitting)\ChildView.cpp(131) : error C2059: syntax error : '&&'
+F:\WIND\Simplifier(surfacefitting)\ChildView.cpp(131) : error C2143: syntax error : missing ';' before '}'
+F:\WIND\Simplifier(surfacefitting)\ChildView.cpp(131) : error C2143: syntax error : missing ';' before '}'
+F:\WIND\Simplifier(surfacefitting)\ChildView.cpp(132) : error C2143: syntax error : missing ';' before '{'
+F:\WIND\Simplifier(surfacefitting)\ChildView.cpp(132) : error C2447: missing function header (old-style formal list?)
+F:\WIND\Simplifier(surfacefitting)\ChildView.cpp(132) : error C2143: syntax error : missing ';' before ','
+F:\WIND\Simplifier(surfacefitting)\ChildView.cpp(133) : error C2143: syntax error : missing ';' before '{'
+F:\WIND\Simplifier(surfacefitting)\ChildView.cpp(133) : error C2447: missing function header (old-style formal list?)
+F:\WIND\Simplifier(surfacefitting)\ChildView.cpp(133) : error C2143: syntax error : missing ';' before '}'
+F:\WIND\Simplifier(surfacefitting)\ChildView.cpp(1600) : error C2660: 'CFileDialog::CFileDialog' : function does not take 7 parameters
+Mesh.cpp
+F:\WIND\Simplifier(surfacefitting)\Mesh.cpp(95) : warning C4305: '=' : truncation from 'const int' to 'float'
+F:\WIND\Simplifier(surfacefitting)\Mesh.cpp(96) : warning C4305: '=' : truncation from 'const int' to 'float'
+F:\WIND\Simplifier(surfacefitting)\Mesh.cpp(3161) : error C2374: 'jjj' : redefinition; multiple initialization
+        F:\WIND\Simplifier(surfacefitting)\Mesh.cpp(3159) : see declaration of 'jjj'
+F:\WIND\Simplifier(surfacefitting)\Mesh.cpp(3171) : error C2374: 'jjj' : redefinition; multiple initialization
+        F:\WIND\Simplifier(surfacefitting)\Mesh.cpp(3169) : see declaration of 'jjj'
+F:\WIND\Simplifier(surfacefitting)\Mesh.cpp(3181) : error C2374: 'jjj' : redefinition; multiple initialization
+        F:\WIND\Simplifier(surfacefitting)\Mesh.cpp(3179) : see declaration of 'jjj'
+F:\WIND\Simplifier(surfacefitting)\Mesh.cpp(3875) : error C2374: 'index' : redefinition; multiple initialization
+        F:\WIND\Simplifier(surfacefitting)\Mesh.cpp(3867) : see declaration of 'index'
+F:\WIND\Simplifier(surfacefitting)\Mesh.cpp(3883) : error C2374: 'index' : redefinition; multiple initialization
+        F:\WIND\Simplifier(surfacefitting)\Mesh.cpp(3867) : see declaration of 'index'
+F:\WIND\Simplifier(surfacefitting)\Mesh.cpp(4985) : error C2374: 'jjj' : redefinition; multiple initialization
+        F:\WIND\Simplifier(surfacefitting)\Mesh.cpp(4983) : see declaration of 'jjj'
+F:\WIND\Simplifier(surfacefitting)\Mesh.cpp(4995) : error C2374: 'jjj' : redefinition; multiple initialization
+        F:\WIND\Simplifier(surfacefitting)\Mesh.cpp(4993) : see declaration of 'jjj'
+F:\WIND\Simplifier(surfacefitting)\Mesh.cpp(5005) : error C2374: 'jjj' : redefinition; multiple initialization
+        F:\WIND\Simplifier(surfacefitting)\Mesh.cpp(5003) : see declaration of 'jjj'
+F:\WIND\Simplifier(surfacefitting)\Mesh.cpp(7020) : error C2374: 'jjj' : redefinition; multiple initialization
+        F:\WIND\Simplifier(surfacefitting)\Mesh.cpp(7018) : see declaration of 'jjj'
+F:\WIND\Simplifier(surfacefitting)\Mesh.cpp(7030) : error C2374: 'jjj' : redefinition; multiple initialization
+        F:\WIND\Simplifier(surfacefitting)\Mesh.cpp(7028) : see declaration of 'jjj'
+F:\WIND\Simplifier(surfacefitting)\Mesh.cpp(7040) : error C2374: 'jjj' : redefinition; multiple initialization
+        F:\WIND\Simplifier(surfacefitting)\Mesh.cpp(7038) : see declaration of 'jjj'
+F:\WIND\Simplifier(surfacefitting)\Mesh.cpp(8554) : error C2374: 'jjj' : redefinition; multiple initialization
+        F:\WIND\Simplifier(surfacefitting)\Mesh.cpp(8552) : see declaration of 'jjj'
+F:\WIND\Simplifier(surfacefitting)\Mesh.cpp(8564) : error C2374: 'jjj' : redefinition; multiple initialization
+        F:\WIND\Simplifier(surfacefitting)\Mesh.cpp(8562) : see declaration of 'jjj'
+F:\WIND\Simplifier(surfacefitting)\Mesh.cpp(8574) : error C2374: 'jjj' : redefinition; multiple initialization
+        F:\WIND\Simplifier(surfacefitting)\Mesh.cpp(8572) : see declaration of 'jjj'
+F:\WIND\Simplifier(surfacefitting)\Mesh.cpp(8698) : warning C4305: '=' : truncation from 'const double' to 'float'
+F:\WIND\Simplifier(surfacefitting)\Mesh.cpp(8720) : error C2374: 'i' : redefinition; multiple initialization
+        F:\WIND\Simplifier(surfacefitting)\Mesh.cpp(8695) : see declaration of 'i'
+F:\WIND\Simplifier(surfacefitting)\Mesh.cpp(8733) : error C2374: 'i' : redefinition; multiple initialization
+        F:\WIND\Simplifier(surfacefitting)\Mesh.cpp(8695) : see declaration of 'i'
+F:\WIND\Simplifier(surfacefitting)\Mesh.cpp(8765) : error C2374: 'i' : redefinition; multiple initialization
+        F:\WIND\Simplifier(surfacefitting)\Mesh.cpp(8746) : see declaration of 'i'
+F:\WIND\Simplifier(surfacefitting)\Mesh.cpp(8778) : error C2374: 'i' : redefinition; multiple initialization
+        F:\WIND\Simplifier(surfacefitting)\Mesh.cpp(8746) : see declaration of 'i'
+F:\WIND\Simplifier(surfacefitting)\Mesh.cpp(8816) : error C2374: 'i' : redefinition; multiple initialization
+        F:\WIND\Simplifier(surfacefitting)\Mesh.cpp(8807) : see declaration of 'i'
+F:\WIND\Simplifier(surfacefitting)\Mesh.cpp(8881) : error C2374: 'k' : redefinition; multiple initialization
+        F:\WIND\Simplifier(surfacefitting)\Mesh.cpp(8821) : see declaration of 'k'
+F:\WIND\Simplifier(surfacefitting)\Mesh.cpp(8913) : error C2374: 'm' : redefinition; multiple initialization
+        F:\WIND\Simplifier(surfacefitting)\Mesh.cpp(8909) : see declaration of 'm'
+F:\WIND\Simplifier(surfacefitting)\Mesh.cpp(8917) : error C2374: 'm' : redefinition; multiple initialization
+        F:\WIND\Simplifier(surfacefitting)\Mesh.cpp(8909) : see declaration of 'm'
+F:\WIND\Simplifier(surfacefitting)\Mesh.cpp(8960) : error C2374: 'i' : redefinition; multiple initialization
+        F:\WIND\Simplifier(surfacefitting)\Mesh.cpp(8921) : see declaration of 'i'
+F:\WIND\Simplifier(surfacefitting)\Mesh.cpp(8970) : error C2374: 'i' : redefinition; multiple initialization
+        F:\WIND\Simplifier(surfacefitting)\Mesh.cpp(8921) : see declaration of 'i'
+Transform.cpp
+F:\WIND\Simplifier(surfacefitting)\Transform.cpp(67) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+F:\WIND\Simplifier(surfacefitting)\Transform.cpp(75) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+F:\WIND\Simplifier(surfacefitting)\Transform.cpp(119) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+F:\WIND\Simplifier(surfacefitting)\Transform.cpp(146) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+F:\WIND\Simplifier(surfacefitting)\Transform.cpp(215) : error C2086: 'j' : redefinition
+F:\WIND\Simplifier(surfacefitting)\Transform.cpp(218) : error C2374: 'i' : redefinition; multiple initialization
+        F:\WIND\Simplifier(surfacefitting)\Transform.cpp(209) : see declaration of 'i'
+F:\WIND\Simplifier(surfacefitting)\Transform.cpp(235) : error C2374: 'i' : redefinition; multiple initialization
+        F:\WIND\Simplifier(surfacefitting)\Transform.cpp(229) : see declaration of 'i'
+F:\WIND\Simplifier(surfacefitting)\Transform.cpp(309) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+F:\WIND\Simplifier(surfacefitting)\Transform.cpp(315) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+F:\WIND\Simplifier(surfacefitting)\Transform.cpp(318) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+F:\WIND\Simplifier(surfacefitting)\Transform.cpp(333) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+Generating Code...
+Error executing cl.exe.
+
+
+
+<h3>Results</h3>
+Simplifier.exe - 37 error(s), 11 warning(s)
+</pre>
+</body>
+</html>

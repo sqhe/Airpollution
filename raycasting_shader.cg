@@ -1,0 +1,93 @@
+
+
+// Define interface between the application and the vertex program
+struct app_vertex
+ {
+   float4 Position     : POSITION;
+   float4 TexCoord     : TEXCOORD1; 
+   float4 Color	       : COLOR0;
+
+};
+
+// Define the interface between the vertex- and the fragment programs
+struct vertex_fragment
+ {
+   float4 Position	  : POSITION; // For the rasterizer
+   float4 TexCoord	  : TEXCOORD0; 
+   float4 Color	          : TEXCOORD1;
+   float4 Pos             : TEXCOORD2;
+};
+
+struct fragment_out 
+{
+  float4 Color	    : COLOR0;
+};
+
+// Raycasting vertex program implementation
+vertex_fragment vertex_main( app_vertex IN )
+{    
+  vertex_fragment OUT;
+  
+  // Get OpenGL state matrices
+  float4x4 ModelView = glstate.matrix.modelview[0];
+  float4x4 ModelViewProj = glstate.matrix.mvp;
+ 
+  // Transform vertex
+  OUT.Position = mul( ModelViewProj, IN.Position );
+  OUT.Pos =  mul( ModelViewProj, IN.Position ); 
+  OUT.TexCoord = IN.TexCoord;
+  OUT.Color = IN.Color;
+  return OUT;
+}
+
+// Raycasting fragment program implementation
+fragment_out fragment_main( vertex_fragment IN,
+			    uniform samplerRECT tex, 
+                            uniform sampler3D volume_tex, 
+			    uniform float stepsize,
+				uniform int width,
+				uniform int heigth
+			   )
+		  
+{
+  fragment_out OUT;
+  float t1=((IN.Pos.x/IN.Pos.w)+1)*width/2;
+  float t2=((IN.Pos.y/IN.Pos.w)+1)*heigth/2;
+  //float2 texc = ((IN.Pos.xy / IN.Pos.w) + 1)*1024 / 2; // find the right place to lookup in the backside buffer
+  float2 texc = float2(t1,t2);
+  float4 start = IN.TexCoord/1024; // the start position of the ray is stored in the texturecoordinate
+  float4 back_position  = texRECT(tex, texc);
+  float3 dir = float3(0,0,0);
+  dir.x = back_position.x - start.x;
+  dir.y = back_position.y - start.y;
+  dir.z = back_position.z - start.z;
+  float len = length(dir.xyz); // the length from front to back is calculated and used to terminate the ray
+  float3 norm_dir = normalize(dir);
+  float delta = stepsize;
+  float3 delta_dir = norm_dir * delta;
+  float delta_dir_len = length(delta_dir);
+  float3 vec = start;
+  float4 col_acc = float4(0,0,0,0);
+  float alpha_acc = 0;
+  float length_acc = 0;
+  float4 color_sample;
+  float alpha_sample;
+
+  for(int i = 0; i < 450; i++)
+    {
+      color_sample = tex3D(volume_tex,vec);
+      alpha_sample = color_sample.a * stepsize;
+      col_acc   += (1.0 - alpha_acc) * color_sample * alpha_sample * 3;
+      alpha_acc += alpha_sample;
+      vec += delta_dir;
+      length_acc += delta_dir_len;
+      if(length_acc >= len || alpha_acc > 1.0) break; // terminate if opacity > 1 or the ray is outside the volume
+    }
+ 
+  OUT.Color =  col_acc;
+
+  //float3 temp=back_position;
+  //OUT.Color = texRECT(tex,texc);
+  //OUT.Color = float4(1,1,1,1);
+  return OUT;
+}

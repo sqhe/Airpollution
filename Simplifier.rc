@@ -1,0 +1,567 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\Simplifier.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\Simplifier.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
+IDR_INTERACT_LEFT       BITMAP                  "res\\s3dtbview1.bmp"
+IDR_INTERACT_RIGHT      BITMAP                  "res\\s3dtbview2.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR  16, 16
+BEGIN
+    BUTTON      ID_OPEN_FILE
+    BUTTON      ID_SAVE_FILE
+    SEPARATOR
+    BUTTON      ID_SIMPLIFY
+    SEPARATOR
+    BUTTON      ID_AXES
+    BUTTON      ID_ANIMATE
+    BUTTON      ID_TRICOLLAPSE
+END
+
+IDR_INTERACT_LEFT TOOLBAR  20, 15
+BEGIN
+    BUTTON      ID_OPEN_FILE
+    SEPARATOR
+    BUTTON      ID_BUILDINGS
+    BUTTON      ID_AIRDATA
+    BUTTON      ID_SHOWPATH
+    BUTTON      ID_SHOWPARTICLES
+    BUTTON      ID_PARTICLESOURCE_SHOWSOURCE
+    BUTTON      ID_TARGETCURSOR
+    BUTTON      ID_VIEW_ACTIVEAREA
+    SEPARATOR
+    BUTTON      ID_SIMSTART
+    BUTTON      ID_SIMSTOP
+    SEPARATOR
+    BUTTON      ID_SIMINIT
+    BUTTON      ID_PARTICLESOURCE_RANDOM
+    BUTTON      ID_PARTICLESOURCE_INITPARTICLES
+    SEPARATOR
+    BUTTON      ID_MOUSEMODE_VIEW
+    BUTTON      ID_MOUSEMODE_MOVELIGHT
+    BUTTON      ID_MOUSEMODE_MOVESOURCE
+    BUTTON      ID_MOUSEMODE_MOVEACTIVEAREA
+    BUTTON      ID_MOUSEMODE_SCALEACTIVEAREA
+    BUTTON      ID_MOUSEMODE_MOVECURSOR
+    SEPARATOR
+    BUTTON      ID_3D
+    BUTTON      ID_HELP
+    BUTTON      ID_SKYBOX
+    BUTTON      ID_PARTICLESOURCE_RANDOM_V
+    BUTTON      ID_PARTICLESOURCE_RANDOM_P
+    BUTTON      ID_DISPLAYTEMPERATURE
+END
+
+IDR_INTERACT_RIGHT TOOLBAR  16, 16
+BEGIN
+    BUTTON      ID_ZOOM_IN
+    BUTTON      ID_ZOOM_OUT
+    SEPARATOR
+    BUTTON      ID_SPIN_XCW
+    BUTTON      ID_SPIN_XCCW
+    SEPARATOR
+    BUTTON      ID_SPIN_YCW
+    BUTTON      ID_SPIN_YCCW
+    SEPARATOR
+    BUTTON      ID_SPIN_ZCW
+    BUTTON      ID_SPIN_ZCCW
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "文件(&F)"
+    BEGIN
+        MENUITEM "打开模型(&O)",                    ID_OPEN_FILE
+        MENUITEM "关闭文件(&C)",                    ID_CLOSE_FILE
+        MENUITEM "保存模型(&S)",                    ID_SAVE_FILE
+        MENUITEM SEPARATOR
+        MENUITEM "保存图片",                        IDM_SAVE_PICTURE
+        MENUITEM SEPARATOR
+        MENUITEM "退出(&X)",                      ID_APP_EXIT
+    END
+    POPUP "查看(&V)"
+    BEGIN
+        POPUP "模型"
+        BEGIN
+            MENUITEM "原始模型",                        IDM_ORIGINAL_MODEL
+            MENUITEM "简化模型",                        IDM_SIMPLIFIED_MODEL
+        END
+        POPUP "绘制模式"
+        BEGIN
+            MENUITEM "线框图",                         IDM_WIREFRAME
+            MENUITEM "实体图",                         IDM_FLAT
+        END
+    END
+    POPUP "帮助(&H)"
+    BEGIN
+        MENUITEM "关于 Simplifier(&A)...",        ID_APP_ABOUT
+    END
+END
+
+IDR_CONTEXTMENU MENU 
+BEGIN
+    POPUP "查看(&V)"
+    BEGIN
+        POPUP "模型"
+        BEGIN
+            MENUITEM "原始模型",                        IDM_ORIGINAL_MODEL
+            MENUITEM "简化模型",                        IDM_SIMPLIFIED_MODEL
+        END
+        POPUP "绘制模式"
+        BEGIN
+            MENUITEM "线框图",                         IDM_WIREFRAME
+            MENUITEM "实体图",                         IDM_FLAT
+        END
+    END
+END
+
+IDR_MENU1 MENU 
+BEGIN
+    POPUP "File"
+    BEGIN
+        MENUITEM "Read Building",               ID_OPEN_FILE
+        MENUITEM "Load air data(txt)",          ID_FILE_LOADAIRDATA
+        MENUITEM "Load air data(bin)",          ID_FILE_LOADAIRDATABIN
+        MENUITEM "Load inlet",                  ID_FILE_LOADINLET
+        MENUITEM "Save air data(bin)",          ID_FILE_SAVEAIRDATA
+        MENUITEM "Read Outbound",               ID_FILE_READOUTBOUND
+    END
+    POPUP "Building Mode"
+    BEGIN
+        MENUITEM "Wireframe",                   IDM_WIREFRAME
+        MENUITEM "Solid",                       IDM_FLAT
+        POPUP "Ground"
+        BEGIN
+            MENUITEM "Wireframe",                   ID_GROUND_WIREFRAME
+            MENUITEM "Solid",                       ID_GROUND_SOLID
+        END
+    END
+    POPUP "Air Mode"
+    BEGIN
+        MENUITEM "Wind field",                  ID_AIRMODE_WINDFEILD, CHECKED
+        MENUITEM "With arrow",                  ID_AIRMODE_WITHARROW, CHECKED
+        MENUITEM "With Pressure",               ID_AIRMODE_WITHPRESSURE, CHECKED
+        MENUITEM "With Velocity",               ID_AIRMODE_WITHVELOCITY, CHECKED
+    END
+    POPUP "Particle Source"
+    BEGIN
+        MENUITEM "Show Source",                 ID_PARTICLESOURCE_SHOWSOURCE
+        MENUITEM "Init Particles inlet",        ID_PARTICLESOURCE_INITPARTICLES
+        MENUITEM "Init Random Particles",       ID_PARTICLESOURCE_RANDOM
+    END
+    POPUP "Mouse Mode"
+    BEGIN
+        MENUITEM "View",                        ID_MOUSEMODE_VIEW
+        MENUITEM "Move Light",                  ID_MOUSEMODE_MOVELIGHT
+        MENUITEM "Move Source",                 ID_MOUSEMODE_MOVESOURCE
+        MENUITEM "Move Cursor",                 ID_MOUSEMODE_MOVECURSOR
+        MENUITEM "Move Active Area",            ID_MOUSEMODE_MOVEACTIVEAREA
+        MENUITEM "Scale Active Area",           ID_MOUSEMODE_SCALEACTIVEAREA
+    END
+    POPUP "View"
+    BEGIN
+        MENUITEM "Active Area",                 ID_VIEW_ACTIVEAREA
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS 
+BEGIN
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_SIMPLIFY DIALOG  0, 0, 157, 88
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "模型简化参数设置"
+FONT 10, "System"
+BEGIN
+    DEFPUSHBUTTON   "确  认",IDOK,25,65,42,12,WS_GROUP
+    PUSHBUTTON      "取  消",IDCANCEL,89,65,42,12
+    EDITTEXT        IDC_FACE_VALUE,76,26,44,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_RATE_VALUE,76,45,37,12,ES_AUTOHSCROLL
+    LTEXT           "%",IDC_STATIC,115,47,8,8,NOT WS_GROUP
+    LTEXT           "原模型有100个三角形",IDC_TEXT,17,11,116,8,NOT WS_GROUP
+    CONTROL         "三角形数目",IDC_FACE,"Button",BS_AUTORADIOBUTTON | WS_GROUP,17,27,56,10
+    CONTROL         "模型简化率",IDC_RATE,"Button",BS_AUTORADIOBUTTON,17,46,56,10
+END
+
+IDD_ABOUTBOX DIALOG  0, 0, 235, 63
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 Model Simplifier"
+FONT 9, "宋体"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,21,21
+    LTEXT           "Model Simplifier 2.0 版",IDC_STATIC,40,14,119,8,SS_NOPREFIX
+    LTEXT           "锋线软件 版权所有 (C) 2000",IDC_STATIC,40,27,119,8
+    DEFPUSHBUTTON   "确定",IDOK,178,7,50,14,WS_GROUP
+    LTEXT           "PioneerSoft Studio Copyright ",IDC_STATIC,40,40,119,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404B0"
+        BEGIN
+            VALUE "FileDescription", "Simplifier Microsoft 基础类应用程序"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "Simplifier"
+            VALUE "LegalCopyright", "版权所有 (C) 2000"
+            VALUE "OriginalFilename", "Simplifier.EXE"
+            VALUE "ProductName", "Simplifier 应用程序"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_SIMPLIFY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 150
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 81
+    END
+
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 56
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_ZOOM                CURSOR                  "res\\zoom.cur"
+IDC_TRANSLATE           CURSOR                  "res\\translat.cur"
+IDC_MY_WAIT             CURSOR                  "res\\Wait.cur"
+IDC_SPIN                CURSOR                  "res\\spinglob.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "Model Simplifier"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "Model Simplifier"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_INDICATOR_EXT        "扩展名"
+    ID_INDICATOR_CAPS       "大写"
+    ID_INDICATOR_NUM        "数字"
+    ID_INDICATOR_SCRL       "滚动"
+    ID_INDICATOR_OVR        "改写"
+    ID_INDICATOR_REC        "记录"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "显示程序信息，版本号和版权\n关于"
+    ID_APP_EXIT             "退出应用程序；提示保存文档\n退出"
+    ID_HELP                 "help"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_NEXT_PANE            "切换到下一个窗格\n下一窗格"
+    ID_PREV_PANE            "切换回前一个窗格\n前一窗格"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_WINDOW_SPLIT         "将活动的窗口分隔成窗格\n分隔"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_CLEAR           "删除被选对象\n删除"
+    ID_EDIT_CLEAR_ALL       "全部删除\n全部删除"
+    ID_EDIT_COPY            "复制被选对象并将其置于剪贴板上\n复制"
+    ID_EDIT_FIND            "查找指定的正文\n查找"
+    ID_EDIT_PASTE           "插入剪贴板内容\n粘贴"
+    ID_EDIT_REPEAT          "重复上一步操作\n重复"
+    ID_EDIT_REPLACE         "用不同的正文替换指定的正文\n替换"
+    ID_EDIT_SELECT_ALL      "选择整个文档\n选择全部"
+    ID_EDIT_UNDO            "撤消最后一步操作\n撤消"
+    ID_EDIT_REDO            "重新执行先前已撤消的操作\n重新执行"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "显示或隐藏工具栏\n显隐工具栏"
+    ID_VIEW_STATUS_BAR      "显示或隐藏状态栏\n显隐状态栏"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "改变窗口大小"
+    AFX_IDS_SCMOVE          "改变窗口位置"
+    AFX_IDS_SCMINIMIZE      "将窗口缩小成图标"
+    AFX_IDS_SCMAXIMIZE      "把窗口放大到最大尺寸"
+    AFX_IDS_SCNEXTWINDOW    "切换到下一个文档窗口"
+    AFX_IDS_SCPREVWINDOW    "切换到先前的文档窗口"
+    AFX_IDS_SCCLOSE         "关闭活动的窗口并提示保存所有文档"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "把窗口恢复到正常大小"
+    AFX_IDS_SCTASKLIST      "激活任务表"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_AXES                 "显示/隐藏坐标轴\n显示/隐藏坐标轴"
+    ID_CLOSE_FILE           "关闭文件\n关闭文件"
+    ID_FILE_LOADAIRDATA     "Load air data"
+    ID_BUILDINGS            "Buildings"
+    ID_AIRDATA              "Air data"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_SAVE_FILE            "保存简化模型\n保存简化模型"
+    ID_ANIMATE              "激活/取消旋转惯性\n激活/取消旋转惯性"
+    ID_OPEN_FILE            "Read Data\n"
+    ID_SIMPLIFY             "简化模型\n简化模型"
+    IDM_ORIGINAL_MODEL      "绘制原始模型\n绘制原始模型"
+    IDM_SIMPLIFIED_MODEL    "绘制简化模型\n绘制简化模型"
+    IDM_WIREFRAME           "Wireframe\n"
+    IDM_FLAT                "Solid\n"
+    IDM_SAVE_PICTURE        "保存图片\n保存图片"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_MOUSE_SPIN           "旋转\n旋转"
+    ID_MOUSE_ZOOM           "放大/缩小\n放大/缩小"
+    ID_MOUSE_TRANSLATE      "平移\n平移"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_SPIN_XCW             "绕X轴顺时钟方向转动\n绕X轴顺时钟方向转动"
+    ID_SPIN_XCCW            "绕X轴逆时钟方向转动\n绕X轴逆时钟方向转动"
+    ID_SPIN_YCW             "绕Y轴顺时钟方向转动\n绕Y轴顺时钟方向转动"
+    ID_SPIN_YCCW            "绕Y轴逆时钟方向转动\n绕Y轴逆时钟方向转动"
+    ID_SPIN_ZCW             "绕Y轴顺时钟方向转动\n绕Y轴顺时钟方向转动"
+    ID_SPIN_ZCCW            "绕Z轴逆时钟方向转动\n绕Z轴逆时钟方向转动"
+    ID_ZOOM_IN              "放大\n放大"
+    ID_ZOOM_OUT             "缩小\n缩小"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_BUILDTET             "Build tetmesh"
+    ID_AIRMODE_WINDFEILD    "Wind field"
+    ID_SHOWGROUND           "Show Ground"
+    ID_SimulationIni        "Simulation initial"
+    ID_SIMSTART             "Simulation start"
+    ID_SIMINIT              "Simulation init"
+    ID_SIMSTOP              "Simulation stop"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_SHOWPATH             "Show Path"
+    ID_PARTICLESOURCE_INITPARTICLES "In Sphere"
+    ID_PARTICLESOURCE_RANDOM "Whole area random"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_3D                   "switch 3D/2D"
+    ID_BUTTON32833          "Show Particles"
+    ID_SHOWPARTICLES        "show particles"
+    ID_MOVELIGHT            "move light"
+    ID_MOVEGENERATOR        "move generator"
+    ID_MOUSEMODE_VIEW       "move camera"
+    ID_MOUSEMODE_MOVELIGHT  "move light"
+    ID_MOUSEMODE_MOVESOURCE "move generator"
+    ID_TARGETCURSOR         "show target cursor"
+    ID_MOUSEMODE_MOVECURSOR "move cursor"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_MOUSEMODE_MOVEACTIVEAREA "move active area"
+    ID_SKYBOX               "skybox"
+    ID_PARTICLESOURCE_RANDOM_V "Random in volumn"
+    ID_PARTICLESOURCE_RANDOM_P "Random in plain"
+    ID_DISPLAYTEMPERATURE   "display the effect of temperature"
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\Simplifier.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
